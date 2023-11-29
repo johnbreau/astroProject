@@ -1,0 +1,54 @@
+---
+interface Props {
+	callToAction: string;
+}
+
+const { callToAction } = Astro.props;
+---
+<details class="accordionPanel">
+    <summary>{callToAction}</summary>
+    <article>Peekaboo! Here's some hidden content!</article>
+</details>
+<style>
+    summary {
+        background-color: #2196F3;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        font-weight: 700;
+        justify-content: space-between;
+    }
+    summary::after {
+        content: '';
+        width: 18px;
+        height: 10px;
+        content: '⬇ ';
+        background-size: cover;
+        margin-left: .75em;
+        transition: 0.2s;
+    }
+    summary::marker {
+        color: #fff;
+        font-size: 1.2em;
+    }
+    details {
+        background: #b1cadf;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    details[open] summary {
+        list-style-type: '⬆ ';
+        border-radius: 5px 5px 0 0;
+    }
+    details[open] summary::after {
+        content: '⬆ ';
+    }
+    details[open] p {
+        border-radius: 5px 5px 0 0;
+        padding: 40px;
+    }
+    article {
+        padding: 20px;
+    }
+</style>
