@@ -1,0 +1,40 @@
+---
+// interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+---
+<ul class="navigation">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/newCss/">newCss</a>
+  </li>
+</ul>
+<style>
+  .navigation {
+    background-color: purple;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+  li {
+      padding: 10px;
+      list-style-type: none;
+    }
+  a {
+		color: white;
+    font-weight: 700;
+    text-decoration: none;
+
+		&:visited {
+			color: pink;
+		}
+	}
+  </style>

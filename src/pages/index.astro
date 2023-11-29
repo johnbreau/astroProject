@@ -4,6 +4,8 @@ import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import ButtonGroup from '../components/ButtonGroup.astro';
 import AccordionPanel from '../components/AccordionPanel.astro';
+import NavigationBar from '../components/navigationBar.astro';
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,6 +13,7 @@ import AccordionPanel from '../components/AccordionPanel.astro';
 		<Header
 		title="Astro App"
 	/>
+	<NavigationBar></NavigationBar>
 	<ButtonGroup/>
 		<AccordionPanel
 			callToAction='Click To Show More One!'
