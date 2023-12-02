@@ -13,5 +13,33 @@ import NavigationBar from '../components/navigationBar.astro';
   </main>
   </Layout>
   <style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+  @keyframes rotateAnimation {
 
+  from {
+
+  transform: rotate3d(1, 1, 1, 0deg);
+
+  }
+
+  to {
+
+  transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: rotateAnimation 2s infinite linear;
+}
   </style>
